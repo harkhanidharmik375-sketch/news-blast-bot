@@ -1,0 +1,25 @@
+name: News Monitor Alert
+
+on:
+  schedule:
+    # માર્કેટ કલાકોમાં દર 5 મિનિટે આપોઆપ સુપરફાસ્ટ રન થશે
+    - cron: '*/5 3-10 * * 1-5'
+  workflow_dispatch: # હમણાં ટેસ્ટ કરવા માટેનું બટન
+
+jobs:
+  run-alert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Libraries
+        run: pip install requests
+
+      - name: Run News Scanner
+        run: python news_blast.py
