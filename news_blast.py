@@ -2,7 +2,7 @@ import requests
 import xml.etree.ElementTree as ET
 import time
 
-TELEGRAM_BOT_TOKEN = "8947925352:AAH92xZTCpCdbzsl8KKhRhl520IEJ8ee_Bc"
+TELEGRAM_BOT_TOKEN = 8947925352:AAH92xZTCpCdbzsI8KKhRhI520lEJ8ee_Bc
 TELEGRAM_CHAT_ID = "1906881906"
 
 # 🟢 જે ન્યૂઝ સ્ટોકને રોકેટ બનાવે
